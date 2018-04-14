@@ -11,12 +11,12 @@ var User = sequelize.define('User', {
 a GET request with all users in the database */
 
 app.get("/users",function(req,res){
-	User.findAll().then()(function(users){
+	User.findAll().then((function(users){
 		console.log(users);
 		console.log('success');
 
 		res.send(users);
-	})
+	}))
 });
 
 module.exports = { 
